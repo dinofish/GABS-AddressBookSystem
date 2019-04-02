@@ -19,7 +19,7 @@ case 'init':
     SELECT a.GUID,a.XING_MING,a.XIANG_MU,a.NEI_RONG,b.USER_ID,b.QUAN_XIAN,b.ZU_ID,c.ZU_NAME FROM txl_jichushuju a
     LEFT JOIN txl_guid_quanxian b
     ON a.GUID=b.GUID
-    LEFT JOIN TXL_ZU c
+    LEFT JOIN txl_zu c
     ON b.ZU_ID=c.ZU_ID
     WHERE a.GUID IN (  
       SELECT GUID FROM txl_guid_quanxian 
